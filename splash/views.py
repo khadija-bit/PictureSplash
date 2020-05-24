@@ -4,3 +4,8 @@ from django.http  import HttpResponse
 # Create your views here.
 def home(request):
     return HttpResponse('welcome to picturespash')
+
+def location(request):
+    return render(request,'all-pictures/location.html')
+
+    
