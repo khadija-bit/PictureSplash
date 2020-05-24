@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns=[
     url(r'^$',views.home,name='home'),
-    url(r'^location',views.location,name='location')
+    
+    # url(r'^location/',views.location,name='location')
 ]
