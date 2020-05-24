@@ -8,4 +8,6 @@ def home(request):
 def location(request):
     return render(request,'all-pictures/location.html')
 
-    
+def category(request):
+    return render(request,'all-pictures/category.html')
+        
