@@ -10,6 +10,17 @@
            <a class="navbar-brand" href="{% url 'location' %}"></a>
         </div>
 
+        <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="search Image" name="image">
+                <div class="input-group-btn">
+                    <button type="submit" class="searchButton">
+                        <i class="fa fa-search"></i>
+                     </button>               
+                     </div>
+            </div>
+        </form>    
+
     </div>
 </nav>
 
