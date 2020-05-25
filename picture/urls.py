@@ -19,5 +19,7 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^splash/',include('splash.urls'))
+    url(r'',include('splash.urls'))
+    
 
 ]
