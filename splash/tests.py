@@ -11,7 +11,7 @@ class LocationTestClass(TestCase):
     
     def test_save_location(self):
         self.khadija.save_location()
-        location = Location.objects_all()
+        location = Location.objects.all()
         self.assertTrue(len(location) > 0)
 
 
@@ -25,5 +25,5 @@ class CategoryTestClass(TestCase):
     
     def test_save_category(self):
         self.khadija.save_category()
-        category = Category.objects_all()
+        category = Category.objects.all()
         self.assertTrue(len(category) > 0)

@@ -18,3 +18,25 @@ class Category(models.Model):
     
     def save_category(self):
         self.save  
+
+class Image(models.Model):
+    image = models.ImageField()
+    name = models.CharField(max_length = 30)
+    description = models.TextField()
+    author = models.CharField(max_length = 30)
+    date = models.DateTimeField(auto_now_add=True)
+    location = models.ForeignKey(Location)
+    category = models.ForeignKey(Category)
+    
+    
+
+    def __str__(self):
+        return self.category
+    
+    def save_image(self):
+        self.save  
+
+    # def delete_image(self):
+    #     self.delete 
+
+    
