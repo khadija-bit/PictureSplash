@@ -26,7 +26,7 @@ class Category(models.Model):
         self.delete     
 
 class Image(models.Model):
-    image = models.ImageField()
+    images = models.ImageField()
     name = models.CharField(max_length = 30)
     description = models.TextField()
     author = models.CharField(max_length = 30)
@@ -50,15 +50,15 @@ class Image(models.Model):
         return image
     
     @classmethod
-    def search_image(category):
-        image = cls.objects.filter(category_ = id).all()
+    def search_image(cls,search_term):
+        image = cls.objects.filter(name__icontains = search_term)
         return image
 
     @classmethod
-    def filter_by_location(location):
-        image = cls.objects.filter(id = id).all()
+    def filter_by_location(cls,search_term):
+        image = cls.objects.filter(locations_location = search_term)
         return image 
-    
-           
+
+          
         
     
