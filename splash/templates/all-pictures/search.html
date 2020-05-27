@@ -8,9 +8,10 @@
         <h3>Found 0 image for the search term {{message}}</h3>
         {% endif %}
     </div>
-    
+
     <div class="row">
         {% if image %}
+        <div>
       {% for images in image %}
         <div class="col-md-4">
             <h1 class="text-center"> {{images.name}}</h1>
@@ -57,6 +58,7 @@
                             <p>{{images.location}}</p>
                             <p>Posted on: {{images.date|timesince}}</p>
                             {% endfor %}
+                          </div>
     {% endif %}
                         </div>
                         

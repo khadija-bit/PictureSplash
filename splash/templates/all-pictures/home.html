@@ -15,16 +15,13 @@
         <div class="card-rows">
             <h1 class="text-center">PictureSplash</h1>
             {% if pic %}
+            <div class="card-columns">
       {% for images in pic %}
             <div class="col-md-4">
-                <div class="card-group">
-                    <div class="card">
-                        <img class="img-thumbnail" src="{{images.images.url}}" alt="Image" style="width: 50%; height: 50%;" >
-                        
-                    </div>
-                </div>
-                <div class="card">
-                    <button
+                <div class="col">
+                    <div class="col">
+                        <img class="img-thumbnail" src="{{images.images.url}}" alt="Image"  >
+                        <button
                         type="button"
                         class="btn btn-primary"
                         data-toggle="modal"
@@ -32,6 +29,10 @@
                     >
                         view
                     </button>
+                    </div>
+                </div>
+                
+                    
                     <div
                         class="modal fade"
                         id="Modals"
@@ -74,13 +75,17 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                
               </div>
-            </div>
-                {% endfor %}
-       {% endif %}
+            
           
-    </div>
-</div>
+                {% endfor %}
+      </div>
+            
+       {% endif %}
+      </div>
+      </div>
+    </div>    
+   
 
 {% endblock %}

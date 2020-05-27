@@ -3,3 +3,8 @@ h1
     color: palevioletred;
     font-family: 'Chelsea Market', cursive;
 }
+body{
+    background-image: url("../image/peace.jpg");
+    background-size: cover;
+    background-position: center;
+}
