@@ -30,6 +30,12 @@ Installation requirements:
 pip freeze > requirements.txt
 ```
 
+Install Django
+```bash
+
+pip install django==1.11
+```
+
 Database Migration:
 
 run check
@@ -52,4 +58,10 @@ Run application
 python3.6 manage.py runserver
 ```
 
-
+# Technology Used
+* Bootstrap
+* Python3.6
+* CSS
+*
+* Django 1.11
+* Heroku
