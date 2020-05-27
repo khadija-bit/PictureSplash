@@ -20,7 +20,10 @@ github clone:
 https://github.com/khadija-bit/PictureSplash.git
 '''
 
-
+Navigate to the directory:
+'''bash
+cd PictureSplash
+'''
 
 
 
