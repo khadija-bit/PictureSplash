@@ -18,8 +18,10 @@ from decouple import config,Csv
 
 
 MODE=config("MODE", default="dev")
-SECRET_KEY = config('SECRET_KEY')
+
 DEBUG = config('DEBUG', default=False, cast=bool)
+
+SECRET_KEY='%56lyf&aixhgr3xoc@!z*lcn#5zo2uudaii7p_woroad_2@8=('
 
 # Application definition
 
