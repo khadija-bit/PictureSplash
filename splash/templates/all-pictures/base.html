@@ -14,33 +14,20 @@
     {% block styles %}
     {% bootstrap_css %}
        <link rel="stylesheet" href="{% static 'css/basephoto.css' %}">
+       <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
     {% endblock %}
 </head>    
 <body>
     {% include "navbar.html" %}
     
     {% block content %}
-     <div class="container">
-      <div class="row">
-        <h1 class="text-center">PictureSplash</h1>
-          {% for images in image %}
-          <div class="col-md-4">
-             
-             <p>{{images.name}}</p>
-             <h1>{{images.category}}</h1>
-             <p>{{images.location}}</p>
-             <p>Posted on: {{images.date}}</p>
-             <img src="{{images.images.url}}" class="img-responsive" alt="">
-             
-             {% endfor %}
-          
-      </div>
-     </div>
-    </div> 
+   
     
     {%endblock%}
 
     {% block scripts %}
+       <link rel="stylesheet" href="{% static 'js/basephoto.js' %}">
+       <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     {% bootstrap_javascript %}
     {% endblock %}

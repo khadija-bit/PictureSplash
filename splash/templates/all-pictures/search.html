@@ -1,29 +1,70 @@
 {%extends 'all-pictures/base.html'%} 
 {% block content %}
 <div class="container">
-   
     <div class="row">
-      {% if image %}
-      <h2>Found {{ image|length }} of searched term {{message}}</h2>
-      {% else %}
-      <h3>Found 0 image for the search term {{message}}</h3>
-      {% endif %}
-
+        {% if image %}
+        <h2>Found {{ image|length }} of searched term {{message}}</h2>
+        {% else %}
+        <h3>Found 0 image for the search term {{message}}</h3>
+        {% endif %}
     </div>
     
     <div class="row">
-    {% if image %}
+        {% if image %}
       {% for images in image %}
-      <div class="col-md-4">
-         
-         <p>{{images.name}}</p>
-         <h1>{{images.category}}</h1>
-         <p>{{images.location}}</p>
-         <p>Posted on: {{images.date}}</p>
-         <img src="{{images.images.url}}"   class="img-responsive" alt="">
-         
-         {% endfor %}
-      {% endif %}
-      </div>  
+        <div class="col-md-4">
+            <h1 class="text-center"> {{images.name}}</h1>
+            <p>Category: {{images.category}}</p>
+            <p>Location: {{images.location}}</p>
+            <p>Posted on: {{images.date|timesince}}</p>
+            <img
+                src="{{images.images.url}}"
+                class="img-responsive"
+                width="100%"
+                height="100%"
+                alt=""
+            >
+            <div
+                class="modal fade"
+                id="Modals"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="ModalsTitle"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ModalsTitle">{{images.name}}</h5>
+                            <button
+                                type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                            >
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img
+                                src="{{images.images.url}}"
+                                class="img-responsive"
+                                width="100%"
+                                height="100%"
+                                alt=""
+                            >
+                            <h1>{{images.category}}</h1>
+                            <p>{{images.location}}</p>
+                            <p>Posted on: {{images.date|timesince}}</p>
+                            {% endfor %}
+    {% endif %}
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-{% endblock %}    
+  </div>
+   
+    {% endblock %}
