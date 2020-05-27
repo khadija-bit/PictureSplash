@@ -16,18 +16,40 @@ This a Django application which allow a user to create and upload an image and c
 # Setup Instaltion
 
 github clone:
-'''bash
+```bash
 https://github.com/khadija-bit/PictureSplash.git
-'''
+```
 
 Navigate to the directory:
-'''bash
+```bash
 cd PictureSplash
-'''
+```
 
 Installation requirements:
-'''bash
+```bash
 pip freeze > requirements.txt
-'''
+```
+
+Database Migration:
+
+run check
+```bash
+python3.6 manage.py check
+```
+
+Make Migration
+'''bash
+python manage.py makemigrations < project app name>
+```
+
+Migrate
+```bash
+python3.6 manage.py migrate
+```
+
+Run application
+```bash
+python3.6 manage.py runserver
+```
 
 
