@@ -1,11 +1,10 @@
 h1
 {
-    
+    background-image: url("../image/peace.jpg");
     color: palevioletred;
     font-family: 'Chelsea Market', cursive;
 }
 body{
-    background-image: url("../image/peace.jpg");
     background: no-repeat;
     background-size: cover;
     background-position: center;
