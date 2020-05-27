@@ -12,7 +12,8 @@ body{
 .header-img {
     
     height: 100px;
-    background-image: url("../image/pho.jpg");
+    background-image: url("../image/p.jpeg");
     background-size: cover;
     background-position: center;
+
   }
