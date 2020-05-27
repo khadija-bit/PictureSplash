@@ -4,7 +4,10 @@
 Khadija Hassan
 
 # Description
-This a Django application which allow a user to create and upload an image and can also copy the link of the image
+This a Django application which allow a user to create and upload an image and can also copy the link of the image.
+
+# Live Link
+https://splashpic.herokuapp.com/
 
 # User Stories
 * View different photos that interest me.
