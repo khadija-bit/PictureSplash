@@ -25,6 +25,9 @@ Navigate to the directory:
 cd PictureSplash
 '''
 
-
+Installation requirements:
+'''bash
+pip freeze > requirements.txt
+'''
 
 
