@@ -18,21 +18,14 @@
             <div class="card-columns">
       {% for images in pic %}
             <div class="col-md-4">
-                <div class="col">
-                    <div class="col">
-                        <img class="img-thumbnail" src="{{images.images.url}}" alt="Image"  >
-                        <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-toggle="modal"
-                        data-target="#Modals"
-                    >
-                        view
-                    </button>
+                <div class="card-group">
+                    <div class="card">
+                        <img class="img-thumbnail" src="{{images.images.url}}" alt="Image" style="width: 100%; height: 300px; border: 5px;" data-toggle="modal" data-target="#Modals"  >
+                       
                     </div>
                 </div>
-                
-                    
+               
+                   
                     <div
                         class="modal fade"
                         id="Modals"
